@@ -1,7 +1,9 @@
 var express = require('express'),
     config = require('./config/server');
 
-var app = express(); // Initialize Express Application instance
+// Application Configuration
+var app = express();
+app.set('view engine', 'jade');
 
 app.get('/', function(request, response){
   response.send('Test Successful!');
